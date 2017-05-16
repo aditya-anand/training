@@ -62,7 +62,7 @@ resource "aws_instance" "web" {
     Name     = "Web ${count.index + 1} of 2"
   }
 
-  count = "${var.numweb}"
+  count = "${var.num_web}"
 }
 
 output "map" {
