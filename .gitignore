@@ -11,3 +11,9 @@
 *.tfvars
 .terraform/
 terraform.tfstate*
+# Compiled files
+*.tfstate
+*.tfstate.backup
+
+# Module directory
+.terraform/
