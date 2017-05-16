@@ -1,0 +1,15 @@
+provider "dnssimple" {
+  token   = "abcd1234"
+  account = "nope"
+}
+
+resource "dnsimple_record" "myweb" {
+  domain = "example.dom"
+  name   = "myweb"
+
+  # value  = "${aws_instance.web.0.public_ip}"
+  value = "${element(aws_instance.web.*.public_ip, count.index)}"
+  type  = "A"
+  ttl   = 3600
+  count = "${var.num_web}"
+}
