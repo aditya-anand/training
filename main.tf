@@ -23,7 +23,6 @@ terraform {
   }
 }
 
-variable atlas_access_token {}
 
 variable aws_access_key {}
 
