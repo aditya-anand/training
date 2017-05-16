@@ -33,7 +33,7 @@ variable region {
 }
 
 variable num_web {
-  default = 2
+  default = 1
 }
 
 /*
